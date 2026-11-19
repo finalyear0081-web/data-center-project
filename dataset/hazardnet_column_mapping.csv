@@ -1,0 +1,11 @@
+application_feature,hazardnet_source_feature,source_file,unit,availability,description
+timestamp,index,All 3 files,ISO datetime YYYY-MM-DD HH:MM:SS,VERIFIED_AVAILABLE,Exact operational timestamp at 10-minute sampling resolution
+inlet_temperature,r<rack>c<chassis>s<slot>,Marconi_A2_Inlet_Air_Temp.csv.gz,Degrees Celsius (°C),VERIFIED_AVAILABLE,Server inlet air temperature recorded by ExaMon sensors
+outlet_temperature,r<rack>c<chassis>s<slot>,Marconi_A2_Outlet_Air_Temp.csv.gz,Degrees Celsius (°C),VERIFIED_AVAILABLE,Server exhaust air temperature recorded by ExaMon sensors
+it_power_consumption,r<rack>c<chassis>s<slot>,Marconi_A2_Power_Consumption.csv.gz,Kilowatts (kW) cluster / Watts (W) node,VERIFIED_AVAILABLE,IT electrical power consumption from node power meters
+humidity,N/A,None,Percentage (%),UNAVAILABLE,Not monitored or provided in Marconi A2 HazardNet release
+cpu_usage,N/A,None,Percentage (%),UNAVAILABLE,Not provided in HazardNet release; correlated with IT power
+hot_aisle_temperature,N/A,None,Degrees Celsius (°C),UNAVAILABLE,Containment aisle sensor not separately instrumented
+cold_aisle_temperature,N/A,None,Degrees Celsius (°C),UNAVAILABLE,Server inlet temperature is used directly as rack intake proxy
+outdoor_temperature,N/A,None,Degrees Celsius (°C),UNAVAILABLE,External meteorological telemetry not in Zenodo dataset
+cooling_power_consumption,N/A,None,Kilowatts (kW),UNAVAILABLE,Facility chiller telemetry not in Zenodo dataset; simulated in software

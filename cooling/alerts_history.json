@@ -1,0 +1,47 @@
+[
+  {
+    "id": "a859a51a",
+    "severity": "CRITICAL",
+    "title": "Critical Temperature Excursion Predicted",
+    "message": "Inlet temperature predicted to reach 29.80\u00b0C at 2026-11-14 09:44:12, exceeding critical limit of 29.5\u00b0C.",
+    "metric_value": 29.8,
+    "timestamp": "2026-11-14 09:44:12",
+    "is_read": false
+  },
+  {
+    "id": "d91be121",
+    "severity": "WARNING",
+    "title": "Chiller Activation Imminent",
+    "message": "Inlet temperature predicted to cross ON threshold (28.0\u00b0C) reaching 28.50\u00b0C at 2024-01-01 12:10:00.",
+    "metric_value": 28.5,
+    "timestamp": "2024-01-01 12:10:00",
+    "is_read": false
+  },
+  {
+    "id": "ad442426",
+    "severity": "WARNING",
+    "title": "Chiller Activation Imminent",
+    "message": "Inlet temperature predicted to cross ON threshold (28.0\u00b0C) reaching 28.50\u00b0C at T3.",
+    "metric_value": 28.5,
+    "timestamp": "T3",
+    "is_read": false
+  },
+  {
+    "id": "c429b5c4",
+    "severity": "WARNING",
+    "title": "Chiller Activation Imminent",
+    "message": "Inlet temperature predicted to cross ON threshold (28.0\u00b0C) reaching 28.50\u00b0C at T3.",
+    "metric_value": 28.5,
+    "timestamp": "T3",
+    "is_read": false
+  },
+  {
+    "id": "6620b03d",
+    "severity": "WARNING",
+    "title": "Chiller Activation Imminent",
+    "message": "Inlet temperature predicted to cross ON threshold (28.0\u00b0C) reaching 28.50\u00b0C at 2024-01-01 12:10:00.",
+    "metric_value": 28.5,
+    "timestamp": "2024-01-01 12:10:00",
+    "is_read": false
+  }
+]

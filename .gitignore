@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment & Local Secrets
+.env
+*.env
+serviceAccountKey*.json
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Keras cache & temp files
+.keras/
+*.log
+
+# Uploads & local storage cache (keep directory structure)
+dataset/uploads/*
+!dataset/uploads/.gitkeep
+services/local_storage/*
+!services/local_storage/.gitkeep
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Scratch & Temporary Testing Files
+scratch/
+storage/temp_processing/
+storage/test_fixtures/
+
+# Raw Large Archive Files (> 100MB blocked by GitHub)
+*.gz
+*.tar.gz
+*.csv.gz
+dataset/hazardnet/

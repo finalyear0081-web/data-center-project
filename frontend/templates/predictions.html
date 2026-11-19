@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}24-Hour Temperature Predictions - Data Center Thermal AI{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+        <h1 class="page-title">Next 24-Hour Temperature Forecast</h1>
+        <div class="page-subtitle">Multi-step stacked LSTM forecast with predictive cooling decision states and thermal
+            excursion detection.</div>
+    </div>
+    <div class="d-flex gap-2">
+        <a href="/api/prediction/export" class="btn btn-secondary-custom btn-sm"><i data-lucide="download" class="me-1"
+                style="width: 14px; height: 14px;"></i> Download CSV</a>
+        <button class="btn btn-primary-custom btn-sm" onclick="runLiveInference()"><i data-lucide="play" class="me-1"
+                style="width: 14px; height: 14px;"></i> Run Forecast</button>
+    </div>
+</div>
+
+<!-- Forecast Chart Card -->
+<div class="card-industrial mb-4">
+    <div class="card-header-clean">
+        <div class="d-flex align-items-center gap-2">
+            <i data-lucide="trending-up" class="text-primary"></i>
+            <span class="fw-bold">Server Inlet Temperature Trajectory (Next 24 Hours)</span>
+        </div>
+        <div class="d-flex align-items-center gap-2 small">
+            <span class="badge bg-light text-dark border">Solid: Historical</span>
+            <span class="badge bg-primary text-white">Dashed: LSTM Forecast</span>
+            <span class="badge bg-danger text-white" id="badgeOnThreshold">28.5°C ON Threshold</span>
+            <span class="badge bg-success text-white" id="badgeOffThreshold">26.5°C OFF Threshold</span>
+        </div>
+    </div>
+    <div class="card-body-clean">
+        <div style="height: 400px; position: relative;">
+            <canvas id="detailedForecastChart"></canvas>
+        </div>
+
+        <div class="row g-3 mt-3 pt-3 border-top text-center">
+            <div class="col-md-3 col-6">
+                <div class="small text-muted">PREDICTED PEAK INLET</div>
+                <div class="h4 fw-bold text-danger mb-0" id="forecastPeakVal">-- °C</div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="small text-muted">PREDICTED MINIMUM</div>
+                <div class="h4 fw-bold text-success mb-0" id="forecastMinVal">-- °C</div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="small text-muted">EXPECTED ACTIVATION TIME</div>
+                <div class="h5 fw-bold text-primary mb-0" id="forecastActivationTime">None Projected</div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="small text-muted" id="coolingDurationLabel">COOLING DURATION (24H)</div>
+                <div class="h4 fw-bold text-dark mb-0" id="forecastDurationVal">-- Hours</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Full Predictions Table Card -->
+<div class="card-industrial">
+    <div class="card-header-clean flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-2">
+            <i data-lucide="list" class="text-secondary"></i>
+            <span class="fw-bold">Forecast Time-Step Records</span>
+            <span class="badge bg-secondary" id="totalTableRecords">96 Records (15-min intervals)</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+            <input type="text" id="tableSearchInput" class="form-control form-control-sm"
+                placeholder="Search timestamp..." style="width: 200px;">
+            <select id="sortSelect" class="form-select form-select-sm" style="width: 170px;">
+                <option value="time_asc">Chronological &uarr;</option>
+                <option value="time_desc">Chronological &darr;</option>
+                <option value="temp_desc">Temperature (High &rarr; Low)</option>
+                <option value="temp_asc">Temperature (Low &rarr; High)</option>
+            </select>
+        </div>
+    </div>
+    <div class="card-body-clean p-0">
+        <div class="table-responsive">
+            <table class="table table-data-center table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">#</th>
+                        <th>Forecast Timestamp</th>
+                        <th>Predicted Inlet Temp</th>
+                        <th>Chiller State</th>
+                        <th>Thermal Condition</th>
+                    </tr>
+                </thead>
+                <tbody id="predictionsTableBody">
+                    <tr>
+                        <td colspan="5" class="text-center py-4 text-muted">Loading forecast records...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="p-3 border-top d-flex justify-content-between align-items-center flex-wrap gap-2 small">
+            <span class="text-muted" id="paginationInfo">Showing 1 to 25 of 288 records</span>
+            <div class="btn-group btn-group-sm" id="paginationButtons">
+                <!-- Dynamically generated pagination -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/charts.js"></script>
+<script src="/static/js/predictions.js"></script>
+{% endblock %}

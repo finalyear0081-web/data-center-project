@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}Model Training & Architecture Configuration - Data Center Thermal AI{% endblock %}
+
+{% block content %}
+<div class="mb-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div>
+        <h1 class="page-title">LSTM Model Training & Architecture</h1>
+        <div class="page-subtitle">Configure neural network architectures, train adaptive thermal forecasting models, and monitor training convergence.</div>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+        <a href="/model-performance" class="btn btn-outline-secondary btn-sm">
+            <i data-lucide="bar-chart-2" class="me-1" style="width: 14px; height: 14px;"></i> View Benchmark Performance
+        </a>
+        <a href="/predictions" class="btn btn-primary-custom btn-sm">
+            <i data-lucide="trending-up" class="me-1" style="width: 14px; height: 14px;"></i> View Forecasts
+        </a>
+    </div>
+</div>
+
+<div class="row g-3">
+    <!-- Training Setup Column -->
+    <div class="col-lg-5">
+        <div class="card-industrial mb-3">
+            <div class="card-header-clean">
+                <span><i data-lucide="sliders" class="me-2" style="width: 16px; height: 16px;"></i>Training Architecture & Hyperparameters</span>
+            </div>
+            <div class="card-body-clean">
+                <form id="modelTrainForm">
+                    <!-- Architecture Selection -->
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold mb-2">Model Architecture</label>
+                        <div class="form-check p-2 border rounded mb-2 bg-light">
+                            <input class="form-check-input ms-1 me-2" type="radio" name="modelArchitecture" id="archResidual" value="RESIDUAL_LSTM" checked>
+                            <label class="form-check-label small fw-semibold" for="archResidual">
+                                Residual LSTM with Persistence Anchor <span class="badge bg-primary ms-1" style="font-size: 0.65rem;">Recommended</span>
+                            </label>
+                            <div class="text-muted" style="font-size: 0.72rem; margin-left: 1.8rem;">
+                                Anchors forecast to the last observed inlet temperature ($\hat{y} = y_{last} + \Delta y$). Prevents flat mean regression on steady datasets.
+                            </div>
+                        </div>
+
+                        <div class="form-check p-2 border rounded">
+                            <input class="form-check-input ms-1 me-2" type="radio" name="modelArchitecture" id="archStacked" value="STACKED_LSTM">
+                            <label class="form-check-label small fw-semibold" for="archStacked">
+                                Stacked Multi-Layer LSTM
+                            </label>
+                            <div class="text-muted" style="font-size: 0.72rem; margin-left: 1.8rem;">
+                                Standard dual-layer recurrent architecture (64 -> Dropout 0.1 -> 64 -> Dense 64 -> Output) with thermal-weighted loss.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-2 mb-3">
+                        <div class="col-6">
+                            <label class="form-label small fw-bold">Training Epochs</label>
+                            <select id="trainEpochs" class="form-select form-select-sm">
+                                <option value="5">5 Epochs (Fast)</option>
+                                <option value="10" selected>10 Epochs (Recommended)</option>
+                                <option value="15">15 Epochs</option>
+                                <option value="20">20 Epochs</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label small fw-bold">Batch Size</label>
+                            <select id="trainBatchSize" class="form-select form-select-sm">
+                                <option value="32">32 Sequences</option>
+                                <option value="64" selected>64 Sequences</option>
+                                <option value="128">128 Sequences</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="p-2 rounded bg-light border small">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="text-muted">Target Sensor:</span>
+                                <span class="fw-semibold">inlet_temperature (°C)</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="text-muted">Loss Function:</span>
+                                <span class="fw-semibold">Thermal-Weighted MSE</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">Persistence Benchmark:</span>
+                                <span class="fw-semibold text-success">Enabled</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="trainFeedbackBox" class="alert d-none py-2 small mb-3"></div>
+
+                    <button type="submit" class="btn btn-primary-custom w-100 py-2" id="btnStartTraining">
+                        <i data-lucide="play-circle" class="me-1" style="width: 16px; height: 16px;"></i> Initiate Model Training
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Training Monitor Column -->
+    <div class="col-lg-7">
+        <div class="card-industrial mb-3">
+            <div class="card-header-clean d-flex justify-content-between align-items-center">
+                <span><i data-lucide="activity" class="me-2" style="width: 16px; height: 16px;"></i>Live Pipeline & Training Monitor</span>
+                <span class="badge bg-secondary" id="liveTrainStatusBadge">IDLE</span>
+            </div>
+            <div class="card-body-clean">
+                <!-- Progress Bar -->
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1">
+                        <span class="fw-semibold" id="liveStageMessage">System idle. Ready for training.</span>
+                        <span class="text-primary fw-bold" id="liveProgressPercent">0%</span>
+                    </div>
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" id="liveProgressBar" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <!-- Training Loss Curves Chart -->
+                <div class="chart-container" style="height: 260px; position: relative;">
+                    <canvas id="trainingLossChart"></canvas>
+                </div>
+
+                <div class="row g-2 mt-3 pt-2 border-top small">
+                    <div class="col-3 text-center">
+                        <span class="text-muted d-block" style="font-size: 0.72rem;">EPOCHS TRAINED</span>
+                        <span class="fw-bold" id="metricEpochsTrained">--</span>
+                    </div>
+                    <div class="col-3 text-center">
+                        <span class="text-muted d-block" style="font-size: 0.72rem;">BEST VAL LOSS</span>
+                        <span class="fw-bold text-success" id="metricBestValLoss">--</span>
+                    </div>
+                    <div class="col-3 text-center">
+                        <span class="text-muted d-block" style="font-size: 0.72rem;">TRAINING DURATION</span>
+                        <span class="fw-bold" id="metricTrainDuration">--</span>
+                    </div>
+                    <div class="col-3 text-center">
+                        <span class="text-muted d-block" style="font-size: 0.72rem;">ACTIVE ARCHITECTURE</span>
+                        <span class="fw-bold text-primary" id="metricActiveArch">--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/model_training.js"></script>
+{% endblock %}

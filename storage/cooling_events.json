@@ -1,0 +1,2702 @@
+[
+  {
+    "timestamp": "2026-11-15 07:22:14",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.72,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.72\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-15 07:22:15",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:22:15",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:22:15",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:22:15",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:22:15",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-15 07:24:06",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:24:06",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 23.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 23.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-15 07:24:07",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:24:07",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:24:07",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:24:07",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:24:07",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-15 07:27:14",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:27:17",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 07:27:20",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:33",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:36",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:37",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:39",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:40",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:41",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:42",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:43",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:43",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:44",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:44",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:44",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:44",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:44",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:45",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:45",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:45",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:45",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:46",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:47",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:47",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:48",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:49",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:50",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:50",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:52",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:52",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:53",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:53",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:53",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:53",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:54",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:54",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:57",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:57",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:57",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:58",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:58",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:58",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:58",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:58",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:59",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:59",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:59",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:43:59",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:00",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:00",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:00",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:00",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:00",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:01",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:01",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:01",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:02",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:04",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:05",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:06",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:07",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 11:44:07",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 12:23:03",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 12:23:03",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 21.85,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 21.85\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-15 12:23:04",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 12:23:04",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 12:23:04",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 12:23:04",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-15 12:23:04",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 04:36:28",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 33.79,
+    "threshold": 28.5,
+    "reason": "Automatic Trigger: Inlet temp 33.79\u00b0C >= ON threshold (28.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 05:42:09",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:42:09",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:42:09",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:42:09",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:42:09",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:42:09",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 05:58:26",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:58:27",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:58:27",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:58:27",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:58:27",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:58:28",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 05:59:44",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:59:44",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:59:44",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:59:45",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:59:45",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 05:59:45",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 06:04:18",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 33.79,
+    "threshold": 28.5,
+    "reason": "Automatic Trigger: Inlet temp 33.79\u00b0C >= ON threshold (28.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 06:05:34",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 06:05:35",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 06:05:35",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 06:05:35",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 06:05:35",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 06:05:35",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 06:33:44",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 32.58,
+    "threshold": 28.5,
+    "reason": "Automatic Trigger: Inlet temp 32.58\u00b0C >= ON threshold (28.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 06:34:59",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 33.79,
+    "threshold": 32.3,
+    "reason": "Automatic Trigger: Inlet temp 33.79\u00b0C >= ON threshold (32.3\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 09:20:52",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 28.5,
+    "threshold": 28.0,
+    "reason": "Automatic Trigger: Inlet temp 28.50\u00b0C >= ON threshold (28.0\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 09:21:23",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:21:24",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:21:24",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:21:24",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:21:24",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:21:25",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 09:23:02",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:23:04",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:23:04",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:23:04",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:23:04",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:23:04",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 09:24:09",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:24:10",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:24:10",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:24:10",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:24:10",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:24:10",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-16 09:24:57",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:24:59",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:24:59",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:24:59",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:24:59",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-16 09:24:59",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:18:30",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:18:30",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 21.39,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 21.39\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:18:31",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:18:31",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:18:31",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:18:31",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:18:31",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:24:44",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:24:44",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 21.39,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 21.39\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:24:44",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:24:44",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:24:44",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:24:44",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:24:44",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:51:39",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:51:39",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 22.59,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 22.59\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:51:40",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:51:40",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:51:40",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:51:40",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:51:40",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:53:13",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 28.5,
+    "threshold": 28.5,
+    "reason": "Automatic Trigger: Inlet temp 28.50\u00b0C >= ON threshold (28.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:53:48",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 28.5,
+    "threshold": 28.5,
+    "reason": "Automatic Trigger: Inlet temp 28.50\u00b0C >= ON threshold (28.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:54:05",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:54:05",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 22.59,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 22.59\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:54:06",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:54:06",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:54:06",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:54:06",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:54:06",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:55:43",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:55:43",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 22.59,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 22.59\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 02:55:44",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:55:44",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:55:44",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:55:44",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 02:55:44",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 04:41:23",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:41:24",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:41:24",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:41:24",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:41:24",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:41:24",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 04:42:06",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:42:07",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:42:07",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:42:07",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:42:07",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:42:07",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 04:42:54",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 28.5,
+    "threshold": 28.5,
+    "reason": "Automatic Trigger: Inlet temp 28.50\u00b0C >= ON threshold (28.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 04:42:55",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:42:55",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:42:55",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:42:55",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 04:42:55",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 05:27:26",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 05:27:26",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 05:27:26",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 05:27:26",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 05:27:26",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 05:27:47",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 05:27:48",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 05:27:48",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 05:27:48",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 05:27:48",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 05:27:48",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Automatic Trigger: Inlet temp 24.00\u00b0C <= OFF threshold (26.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 07:16:51",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 30.36,
+    "threshold": 28.5,
+    "reason": "Automatic Trigger: Inlet temp 30.36\u00b0C >= ON threshold (28.5\u00b0C)"
+  },
+  {
+    "timestamp": "2026-11-17 07:34:05",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:34:05",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:34:05",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:34:05",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:34:05",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.0,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.0\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-17 07:34:24",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:34:25",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:34:25",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:34:25",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:34:25",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:34:25",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-17 07:35:40",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:35:56",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:35:57",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:35:57",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:35:57",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:35:57",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 07:35:57",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-17 10:10:06",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:10:09",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.75,
+    "threshold": 26.5,
+    "reason": "Temperature 24.75\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-17 10:10:18",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:10:18",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:10:19",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:10:19",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:10:19",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-17 10:20:12",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 28.5,
+    "threshold": 28.5,
+    "reason": "Temperature 28.50\u00b0C >= ON threshold (28.5\u00b0C): Chiller ON."
+  },
+  {
+    "timestamp": "2026-11-17 10:20:23",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:20:23",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:20:23",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:20:23",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:20:23",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-17 10:21:32",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:21:35",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.75,
+    "threshold": 26.5,
+    "reason": "Temperature 24.75\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-17 10:21:45",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:21:45",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:21:45",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:21:45",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 10:21:45",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-17 14:01:46",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 14:01:48",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-17 14:01:49",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 25.3,
+    "threshold": 26.5,
+    "reason": "Temperature 25.30\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-18 04:06:30",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:06:32",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:06:34",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:20:25",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:20:27",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.75,
+    "threshold": 26.5,
+    "reason": "Temperature 24.75\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-18 04:20:36",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:20:36",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:20:36",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:20:36",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:20:36",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-18 04:22:15",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:22:16",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:22:16",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:22:16",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:22:16",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-18 04:32:08",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:32:08",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:32:08",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:32:08",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:32:08",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-18 04:34:30",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:34:34",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:48:36",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:48:38",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.75,
+    "threshold": 26.5,
+    "reason": "Temperature 24.75\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-18 04:48:46",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:48:47",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:48:47",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:48:47",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 04:48:47",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-18 14:08:21",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 14:08:24",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 15:15:29",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-18 15:15:35",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:21:26",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:21:27",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.75,
+    "threshold": 26.5,
+    "reason": "Temperature 24.75\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-19 02:21:35",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:21:35",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:21:35",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:21:35",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:21:35",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-19 02:22:32",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 28.5,
+    "threshold": 28.5,
+    "reason": "Temperature 28.50\u00b0C >= ON threshold (28.5\u00b0C): Chiller ON."
+  },
+  {
+    "timestamp": "2026-11-19 02:22:55",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 22.0,
+    "threshold": 26.5,
+    "reason": "Temperature 22.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-19 02:22:55",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 28.5,
+    "threshold": 28.5,
+    "reason": "Temperature 28.50\u00b0C >= ON threshold (28.5\u00b0C): Chiller ON."
+  },
+  {
+    "timestamp": "2026-11-19 02:23:56",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 28.5,
+    "threshold": 28.5,
+    "reason": "Temperature 28.50\u00b0C >= ON threshold (28.5\u00b0C): Chiller ON."
+  },
+  {
+    "timestamp": "2026-11-19 02:24:00",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:24:00",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:24:00",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:24:00",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:24:00",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-19 02:26:55",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:26:57",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.75,
+    "threshold": 26.5,
+    "reason": "Temperature 24.75\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-19 02:27:03",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:27:03",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:27:03",
+    "mode": "MANUAL",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned STOPPED via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:27:03",
+    "mode": "MANUAL",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": null,
+    "threshold": null,
+    "reason": "Manual Operator Override: Chiller turned RUNNING via control panel."
+  },
+  {
+    "timestamp": "2026-11-19 02:27:03",
+    "mode": "AUTOMATIC",
+    "previous_state": "RUNNING",
+    "new_state": "STOPPED",
+    "trigger_temperature": 24.0,
+    "threshold": 26.5,
+    "reason": "Temperature 24.00\u00b0C <= OFF threshold (26.5\u00b0C): Chiller OFF."
+  },
+  {
+    "timestamp": "2026-11-19 02:28:07",
+    "mode": "AUTOMATIC",
+    "previous_state": "STOPPED",
+    "new_state": "RUNNING",
+    "trigger_temperature": 28.55,
+    "threshold": 28.5,
+    "reason": "Temperature 28.55\u00b0C >= ON threshold (28.5\u00b0C): Chiller ON."
+  }
+]

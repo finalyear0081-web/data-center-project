@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: datacenter-predictive-cooling
+    env: docker
+    plan: standard
+    region: oregon
+    dockerfilePath: Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEFAULT_ON_THRESHOLD
+        value: "28.0"
+      - key: DEFAULT_OFF_THRESHOLD
+        value: "26.0"

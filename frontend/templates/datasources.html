@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block title %}Data Source Management - Data Center Thermal AI{% endblock %}
+
+{% block content %}
+<div class="mb-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div>
+        <h1 class="page-title">Data Source Management</h1>
+        <div class="page-subtitle">Ingest telemetry via file uploads (CSV, Excel, JSON) or connect authorized external REST APIs.</div>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+        <a href="/dataset-analysis" class="btn btn-outline-primary btn-sm">
+            <i data-lucide="microscope" class="me-1" style="width: 14px; height: 14px;"></i> View Suitability Analysis
+        </a>
+    </div>
+</div>
+
+<div class="row g-3">
+    <!-- Left Column: Ingestion Methods (Tabs) -->
+    <div class="col-lg-6">
+        <div class="card-industrial mb-3">
+            <div class="card-header-clean p-2">
+                <ul class="nav nav-pills w-100" id="ingestionTabs" role="tablist">
+                    <li class="nav-item flex-fill text-center" role="presentation">
+                        <button class="nav-link active py-2 w-100" id="file-tab" data-bs-toggle="tab" data-bs-target="#filePane" type="button" role="tab">
+                            <i data-lucide="file-spreadsheet" class="me-1" style="width: 16px; height: 16px;"></i> File Upload
+                        </button>
+                    </li>
+                    <li class="nav-item flex-fill text-center" role="presentation">
+                        <button class="nav-link py-2 w-100" id="api-tab" data-bs-toggle="tab" data-bs-target="#apiPane" type="button" role="tab">
+                            <i data-lucide="cloud-lightning" class="me-1" style="width: 16px; height: 16px;"></i> External REST API
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body-clean">
+                <div class="tab-content" id="ingestionTabContent">
+                    <!-- File Upload Tab -->
+                    <div class="tab-pane fade show active" id="filePane" role="tabpanel">
+                        <form id="datasetUploadForm">
+                            <div class="upload-dropzone mb-3" id="dropZone">
+                                <i data-lucide="file-spreadsheet" class="text-primary mb-2" style="width: 44px; height: 44px;"></i>
+                                <h6 class="fw-bold mb-1">Drag and drop dataset file here</h6>
+                                <p class="small text-secondary mb-2">Supported: CSV (.csv), Excel (.xlsx, .xls), JSON (.json)</p>
+                                <input type="file" id="csvFileInput" class="d-none" accept=".csv,.xlsx,.xls,.json" required>
+                                <button type="button" class="btn btn-secondary-custom btn-sm" onclick="document.getElementById('csvFileInput').click()">Browse Local Files</button>
+                            </div>
+
+                            <div id="fileSelectionInfo" class="d-none p-2 bg-light rounded border mb-3 small d-flex justify-content-between align-items-center">
+                                <span id="selectedFileName" class="text-truncate fw-semibold" style="max-width: 250px;">filename.csv</span>
+                                <span id="selectedFileSize" class="text-muted">0 KB</span>
+                            </div>
+
+                            <!-- Pipeline Progress Tracker -->
+                            <div id="pipelineProgressContainer" class="d-none mb-3">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span class="fw-semibold" id="pipelineStageText">Processing Stage...</span>
+                                    <span class="text-primary fw-bold" id="pipelineProgressPct">0%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" id="pipelineProgressBar" style="width: 0%;"></div>
+                                </div>
+                            </div>
+
+                            <div id="uploadFeedbackBox" class="alert d-none py-2 small mb-3"></div>
+
+                            <button type="submit" class="btn btn-primary-custom w-100 py-2" id="btnUploadSubmit">
+                                <i data-lucide="upload" class="me-1" style="width: 16px; height: 16px;"></i> Upload & Analyze Dataset
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- External API Connection Tab -->
+                    <div class="tab-pane fade" id="apiPane" role="tabpanel">
+                        <form id="apiConnectForm">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Telemetry API Endpoint URL</label>
+                                <input type="url" id="apiEndpointUrl" class="form-control form-control-sm" placeholder="https://telemetry.datacenter.corp/api/v1/sensors" required>
+                                <div class="form-text" style="font-size: 0.75rem;">REST endpoint providing real-time or historical data-center telemetry.</div>
+                            </div>
+
+                            <div class="row g-2 mb-3">
+                                <div class="col-sm-6">
+                                    <label class="form-label small fw-bold">Authentication Type</label>
+                                    <select id="apiAuthType" class="form-select form-select-sm" onchange="toggleAuthFields()">
+                                        <option value="NONE">No Authentication</option>
+                                        <option value="BEARER_TOKEN">Bearer Token (JWT / OAuth)</option>
+                                        <option value="API_KEY_HEADER" selected>API Key (Custom Header)</option>
+                                        <option value="API_KEY_QUERY">API Key (Query Parameter)</option>
+                                        <option value="BASIC_AUTH">Basic Auth (user:password)</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label small fw-bold">Header Name</label>
+                                    <input type="text" id="apiHeaderName" class="form-control form-control-sm" value="X-API-Key" placeholder="Authorization or X-API-Key">
+                                </div>
+                            </div>
+
+                            <div class="mb-3" id="apiKeyContainer">
+                                <label class="form-label small fw-bold">API Key / Token (Masked)</label>
+                                <div class="input-group input-group-sm">
+                                    <input type="password" id="apiKeySecret" class="form-control form-control-sm" placeholder="Enter API secret key">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="toggleSecretVisibility()">
+                                        <i data-lucide="eye" id="eyeIcon" style="width: 14px; height: 14px;"></i>
+                                    </button>
+                                </div>
+                                <div class="form-text" style="font-size: 0.72rem;">Credentials are stored in encrypted backend storage and never leaked to frontend.</div>
+                            </div>
+
+                            <div class="row g-2 mb-3">
+                                <div class="col-sm-6">
+                                    <label class="form-label small fw-bold">JSON Data Path (Optional)</label>
+                                    <input type="text" id="apiJsonPath" class="form-control form-control-sm" placeholder="e.g. data.readings">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label small fw-bold">Polling Interval</label>
+                                    <select id="apiPollingInterval" class="form-select form-select-sm">
+                                        <option value="5">Every 5 minutes</option>
+                                        <option value="10">Every 10 minutes</option>
+                                        <option value="15" selected>Every 15 minutes</option>
+                                        <option value="30">Every 30 minutes</option>
+                                        <option value="60">Hourly</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div id="apiTestFeedback" class="alert d-none py-2 small mb-3"></div>
+
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-secondary-custom flex-grow-1 py-2" id="btnTestApi" onclick="testApiConnection()">
+                                    <i data-lucide="radio" class="me-1" style="width: 15px; height: 15px;"></i> Test Endpoint
+                                </button>
+                                <button type="submit" class="btn btn-primary-custom flex-grow-1 py-2" id="btnConnectApi">
+                                    <i data-lucide="save" class="me-1" style="width: 15px; height: 15px;"></i> Connect & Sync
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column: Active Ingestion Source Profile & History -->
+    <div class="col-lg-6">
+        <!-- Active Source Card -->
+        <div class="card-industrial mb-3">
+            <div class="card-header-clean">
+                <span><i data-lucide="check-circle-2" class="me-2 text-success" style="width: 16px; height: 16px;"></i>Active Telemetry Source</span>
+                <span class="badge bg-success" id="activeSourceStatusBadge">Active</span>
+            </div>
+            <div class="card-body-clean small">
+                <div class="row g-2 mb-2">
+                    <div class="col-6">
+                        <span class="text-muted d-block" style="font-size: 0.72rem;">ACTIVE DATASET / ENDPOINT</span>
+                        <span class="fw-bold text-truncate d-block" id="activeSourceName">Loading...</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="text-muted d-block" style="font-size: 0.72rem;">SCHEMA CLASSIFICATION</span>
+                        <span class="fw-bold" id="activeSourceSchema">Detecting...</span>
+                    </div>
+                </div>
+                <div class="row g-2 mb-3">
+                    <div class="col-4">
+                        <span class="text-muted d-block" style="font-size: 0.72rem;">TOTAL RECORDS</span>
+                        <span class="fw-bold text-primary" id="activeSourceRecords">0</span>
+                    </div>
+                    <div class="col-4">
+                        <span class="text-muted d-block" style="font-size: 0.72rem;">SAMPLING INTERVAL</span>
+                        <span class="fw-bold" id="activeSourceInterval">--</span>
+                    </div>
+                    <div class="col-4">
+                        <span class="text-muted d-block" style="font-size: 0.72rem;">FORECAST HORIZON</span>
+                        <span class="fw-bold" id="activeSourceHorizon">--</span>
+                    </div>
+                </div>
+
+                <div class="p-2 rounded bg-light border mb-2 d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold d-block">Suitability Evaluation:</span>
+                        <span class="text-muted" id="activeSuitabilityVerdict">Evaluating...</span>
+                    </div>
+                    <a href="/dataset-analysis" class="btn btn-sm btn-outline-secondary">Deep Diagnostic</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ingestion History Table Card -->
+        <div class="card-industrial">
+            <div class="card-header-clean">
+                <span><i data-lucide="cloud" class="me-2 text-primary" style="width: 16px; height: 16px;"></i>Cloudinary Dataset Storage History</span>
+                <button class="btn btn-sm btn-link text-decoration-none p-0" onclick="loadIngestionHistory()">Refresh</button>
+            </div>
+            <div class="card-body-clean p-0">
+                <div class="table-responsive" style="max-height: 280px;">
+                    <table class="table table-hover table-sm small align-middle mb-0" id="ingestionHistoryTable">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Dataset Name</th>
+                                <th>Format</th>
+                                <th>Size</th>
+                                <th>Uploaded</th>
+                                <th>Records</th>
+                                <th>Cloudinary Status</th>
+                                <th style="width: 90px; text-align: center;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ingestionHistoryBody">
+                            <tr><td colspan="7" class="text-center py-3 text-muted">Loading history...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/datasources.js"></script>
+{% endblock %}

@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}Thermal Alerts & Operational Reports - Data Center Thermal AI{% endblock %}
+
+{% block content %}
+<div class="mb-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div>
+        <h1 class="page-title">Thermal Alerts & Compliance Reports</h1>
+        <div class="page-subtitle">Real-time thermal threshold monitoring, excursion incident audit trail, and operational cooling reports.</div>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary btn-sm" onclick="exportAuditReport('json')">
+            <i data-lucide="download" class="me-1" style="width: 14px; height: 14px;"></i> Export JSON
+        </button>
+        <button class="btn btn-primary-custom btn-sm" onclick="exportAuditReport('csv')">
+            <i data-lucide="file-text" class="me-1" style="width: 14px; height: 14px;"></i> Export CSV Audit Log
+        </button>
+    </div>
+</div>
+
+<!-- 4 Alarm Level Indicators -->
+<div class="row g-3 mb-3">
+    <div class="col-sm-6 col-xl-3">
+        <div class="card-industrial p-3 border-start border-4 border-success">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="small text-muted fw-semibold">NORMAL RANGE</span>
+                <span class="badge bg-success-subtle text-success border border-success-subtle" id="badgeRangeNormal">&lt; 26.5°C</span>
+            </div>
+            <div class="fs-4 fw-bold text-success" id="statNormalPercent">-- %</div>
+            <div class="small text-muted" style="font-size: 0.72rem;">Optimal efficiency, chiller inactive</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="card-industrial p-3 border-start border-4 border-warning">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="small text-muted fw-semibold">WARNING ZONE</span>
+                <span class="badge bg-warning-subtle text-warning border border-warning-subtle" id="badgeRangeWarning">26.5°C - 28.5°C</span>
+            </div>
+            <div class="fs-4 fw-bold text-warning" id="statWarningCount">0</div>
+            <div class="small text-muted" style="font-size: 0.72rem;">Deadband hold / standby zone</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="card-industrial p-3 border-start border-4 border-danger">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="small text-muted fw-semibold">COOLING ACTIVATION</span>
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle" id="badgeRangeCooling">&gt;= 28.5°C</span>
+            </div>
+            <div class="fs-4 fw-bold text-danger" id="statCriticalCount">0</div>
+            <div class="small text-muted" style="font-size: 0.72rem;">Chiller forced ON automatically</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="card-industrial p-3 border-start border-4 border-dark">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="small text-muted fw-semibold">THERMAL EMERGENCY</span>
+                <span class="badge bg-dark text-white">&gt;= 33°C</span>
+            </div>
+            <div class="fs-4 fw-bold text-dark" id="statEmergencyCount">0</div>
+            <div class="small text-muted" style="font-size: 0.72rem;">Immediate IT risk excursion</div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <!-- Active Thermal Incidents Table -->
+    <div class="col-lg-8">
+        <div class="card-industrial mb-3">
+            <div class="card-header-clean d-flex justify-content-between align-items-center">
+                <span><i data-lucide="shield-alert" class="me-2 text-danger" style="width: 16px; height: 16px;"></i>Forecasted & Historical Thermal Excursion Audit</span>
+                <span class="small text-muted" id="incidentTableCount">0 Incidents Detected</span>
+            </div>
+            <div class="card-body-clean p-0">
+                <div class="table-responsive" style="max-height: 400px;">
+                    <table class="table table-hover table-sm small align-middle mb-0" id="incidentsTable">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Severity</th>
+                                <th>Inlet Temp (°C)</th>
+                                <th>Threshold Delta</th>
+                                <th>Chiller Action</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="incidentsTableBody">
+                            <tr><td colspan="6" class="text-center py-4 text-muted">Scanning telemetry for thermal incidents...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Configuration & Threshold Rules -->
+    <div class="col-lg-4">
+        <div class="card-industrial mb-3">
+            <div class="card-header-clean">
+                <span><i data-lucide="settings" class="me-2" style="width: 16px; height: 16px;"></i>Predictive Cooling Thresholds</span>
+            </div>
+            <div class="card-body-clean small">
+                <div class="mb-3">
+                    <label class="form-label text-muted d-block" style="font-size: 0.72rem;">CHILLER ON SETPOINT</label>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="number" class="form-control form-control-sm w-50" id="cfgOnThreshold" value="28.5" step="0.5" readonly>
+                        <span class="fw-bold text-danger">°C</span>
+                        <span class="badge bg-danger-subtle text-danger ms-auto">Automatic ON</span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-muted d-block" style="font-size: 0.72rem;">CHILLER OFF SETPOINT</label>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="number" class="form-control form-control-sm w-50" id="cfgOffThreshold" value="26.5" step="0.5" readonly>
+                        <span class="fw-bold text-primary">°C</span>
+                        <span class="badge bg-primary-subtle text-primary ms-auto">Automatic OFF</span>
+                    </div>
+                </div>
+
+                <div class="p-2 rounded bg-light border mb-3">
+                    <span class="fw-semibold d-block mb-1" id="deadbandRangeLabel">Hysteresis Deadband (26.5°C - 28.5°C):</span>
+                    <span class="text-muted" style="font-size: 0.75rem;">
+                        Prevents rapid cycling. When inlet temperature enters the deadband, the chiller holds its previous operating state without toggling.
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-2 text-muted" style="font-size: 0.75rem;">
+                    <i data-lucide="info" style="width: 14px; height: 14px;"></i>
+                    <span>Simulation environment: Actuations are virtual and recorded to audit storage.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/alerts_reports.js"></script>
+{% endblock %}

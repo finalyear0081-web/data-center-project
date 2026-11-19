@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+
+{% block title %}Overview Dashboard - Data Center Predictive Cooling{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+        <h1 class="page-title">Data Center Thermal Overview</h1>
+        <div class="page-subtitle">Real-time telemetry monitoring and multi-step LSTM predictive cooling status.</div>
+    </div>
+    <div class="d-flex gap-2">
+        <button class="btn btn-secondary-custom btn-sm" onclick="refreshDashboard()"><i data-lucide="refresh-cw" class="me-1" style="width: 14px; height: 14px;"></i> Refresh</button>
+        <a href="/dataset" class="btn btn-primary-custom btn-sm"><i data-lucide="upload" class="me-1" style="width: 14px; height: 14px;"></i> Ingest Dataset</a>
+    </div>
+</div>
+
+<!-- Alert Banner if High Temp Expected -->
+<div id="dashboardAlertBanner" class="alert alert-warning py-2 px-3 small d-none d-flex justify-content-between align-items-center mb-3">
+    <div class="d-flex align-items-center gap-2">
+        <i data-lucide="alert-triangle" class="text-warning"></i>
+        <span id="dashboardAlertBannerText">Thermal Alert</span>
+    </div>
+    <button type="button" class="btn-close btn-sm" onclick="this.parentElement.classList.add('d-none')"></button>
+</div>
+
+<!-- Dynamic Active Dataset Metadata Ribbon -->
+<div class="card-industrial mb-3 bg-light border" id="dashboardDatasetMetadataRibbon">
+    <div class="p-2 px-3 d-flex flex-wrap align-items-center justify-content-between gap-2 small">
+        <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-primary text-white" id="ribbonDatasetBadge">ACTIVE DATASET</span>
+            <strong id="ribbonDatasetTitle">Loading Active Telemetry Stream...</strong>
+        </div>
+        <div class="d-flex flex-wrap gap-2 text-secondary" id="ribbonDetails">
+            <span><i data-lucide="server" class="me-1" style="width: 13px; height: 13px;"></i>Telemetry Stream</span>
+            <span>&bull;</span>
+            <span><i data-lucide="clock" class="me-1" style="width: 13px; height: 13px;"></i>Multi-Step Horizon</span>
+            <span>&bull;</span>
+            <span><i data-lucide="calendar" class="me-1" style="width: 13px; height: 13px;"></i>Synchronized</span>
+        </div>
+    </div>
+</div>
+
+<!-- KPI Cards Grid -->
+<div class="row g-3 mb-4">
+    <div class="col-xl-3 col-sm-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <div class="kpi-label mb-0">Current Inlet Temperature</div>
+                <span class="badge bg-secondary" id="kpi-inlet-status-badge">NORMAL</span>
+            </div>
+            <div class="kpi-main-val text-primary" id="kpi-inlet-temp">-- °C</div>
+            <div class="kpi-footnote">Outlet: <strong id="kpi-outlet-temp">-- °C</strong> | Delta: <span id="kpi-delta-temp">-- °C</span></div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6">
+        <div class="kpi-card">
+            <div class="kpi-label" id="kpi-peak-label">Predicted Peak Inlet</div>
+            <div class="kpi-main-val text-danger" id="kpi-predicted-max">-- °C</div>
+            <div class="kpi-footnote">Forecast Average: <strong id="kpi-predicted-avg">-- °C</strong></div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6">
+        <div class="kpi-card">
+            <div class="kpi-label">IT Power Consumption</div>
+            <div class="kpi-main-val text-dark" id="kpi-it-power">-- kW</div>
+            <div class="kpi-footnote">Facility Power: <strong id="kpi-cpu-usage">-- kW</strong></div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6">
+        <div class="kpi-card">
+            <div class="kpi-label">Chiller Operating State</div>
+            <div class="d-flex align-items-center gap-2 mt-1 mb-2">
+                <div class="status-pill-lg stopped" id="kpi-chiller-status">
+                    <span class="dot-indicator gray"></span>
+                    <span id="kpi-chiller-text">STANDBY</span>
+                </div>
+            </div>
+            <div class="kpi-footnote">Mode: <strong id="kpi-cooling-mode">AUTOMATIC</strong> | Next: <span id="kpi-activation-time">--</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Row -->
+<div class="row g-3 mb-4">
+    <!-- Predicted Forecast Chart -->
+    <div class="col-lg-8">
+        <div class="card-industrial">
+            <div class="card-header-clean">
+                <span id="overviewForecastChartTitle"><i data-lucide="trending-up" class="me-2" style="width: 16px; height: 16px;"></i>LSTM Temperature Forecast with Cooling Thresholds</span>
+                <span class="badge bg-primary-subtle text-primary border" id="forecastHorizonBadge">Multi-Step</span>
+            </div>
+            <div class="card-body-clean">
+                <div class="chart-container" style="height: 320px;">
+                    <canvas id="overviewForecastChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chiller Control Card -->
+    <div class="col-lg-4">
+        <div class="card-industrial h-100">
+            <div class="card-header-clean">
+                <span><i data-lucide="thermometer-snowflake" class="me-2" style="width: 16px; height: 16px;"></i>Predictive Cooling Controller</span>
+            </div>
+            <div class="card-body-clean d-flex flex-column justify-content-between">
+                <div>
+                    <div class="chiller-cabinet mb-3" id="overviewChillerCabinet">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" class="chiller-fan-svg" id="overviewChillerFanSvg" role="img" aria-label="Chiller Status Fan">
+                          <defs>
+                            <radialGradient id="housingDash">
+                              <stop offset="70%" stop-color="#f8fafc"/>
+                              <stop offset="92%" stop-color="#dce4ed"/>
+                              <stop offset="100%" stop-color="#94a3b8"/>
+                            </radialGradient>
+                            <linearGradient id="bladeDash" x1="0" y1="0" x2="1" y2="1">
+                              <stop offset="0%" stop-color="#64748b"/>
+                              <stop offset="45%" stop-color="#cbd5e1"/>
+                              <stop offset="100%" stop-color="#475569"/>
+                            </linearGradient>
+                            <filter id="shadowDash">
+                              <feGaussianBlur stdDeviation="3"/>
+                            </filter>
+                          </defs>
+
+                          <!-- Stationary outer housing -->
+                          <circle cx="150" cy="150" r="137" fill="#94a3b8" opacity=".15" filter="url(#shadowDash)"/>
+                          <circle cx="150" cy="150" r="132" fill="url(#housingDash)" stroke="#cbd5e1" stroke-width="3"/>
+                          <circle cx="150" cy="150" r="116" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+                          <!-- Rotating fan blades -->
+                          <g class="fan-rotor" id="overviewFanRotor">
+                            <animateTransform id="overviewFanAnim" attributeName="transform" type="rotate"
+                              from="0 150 150" to="360 150 150"
+                              dur="0.8s" repeatCount="indefinite"/>
+
+                            <g fill="url(#bladeDash)" stroke="#475569" stroke-width="1.5">
+                              <path d="M150 137 C120 112 111 67 137 39 C151 24 168 38 166 60 C163 91 164 116 160 138 Z"/>
+                              <path d="M150 137 C120 112 111 67 137 39 C151 24 168 38 166 60 C163 91 164 116 160 138 Z" transform="rotate(72 150 150)"/>
+                              <path d="M150 137 C120 112 111 67 137 39 C151 24 168 38 166 60 C163 91 164 116 160 138 Z" transform="rotate(144 150 150)"/>
+                              <path d="M150 137 C120 112 111 67 137 39 C151 24 168 38 166 60 C163 91 164 116 160 138 Z" transform="rotate(216 150 150)"/>
+                              <path d="M150 137 C120 112 111 67 137 39 C151 24 168 38 166 60 C163 91 164 116 160 138 Z" transform="rotate(288 150 150)"/>
+                            </g>
+
+                            <!-- Central motor hub -->
+                            <circle cx="150" cy="150" r="25" fill="#64748b" stroke="#334155" stroke-width="3"/>
+                            <circle cx="150" cy="150" r="15" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+                            <circle cx="150" cy="150" r="6" fill="#475569"/>
+                          </g>
+
+                          <!-- Stationary housing details -->
+                          <circle cx="150" cy="150" r="126" fill="none" stroke="#ffffff" stroke-width="2" opacity=".8"/>
+                        </svg>
+                    </div>
+                    <div class="text-center mb-3">
+                        <h5 class="fw-bold mb-1" id="overviewChillerTitle">CHILLER STOPPED (OFF)</h5>
+                        <div class="small opacity-75" id="overviewChillerReason">Temperature in normal range.</div>
+                    </div>
+
+                    <div class="threshold-badge-container p-2 rounded bg-light border mb-3 small">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Chiller ON Setpoint:</span>
+                            <strong class="text-danger" id="overviewOnTh">28.0°C</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Chiller OFF Setpoint:</span>
+                            <strong class="text-info" id="overviewOffTh">26.0°C</strong>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Hysteresis Deadband:</span>
+                            <strong class="text-secondary">2.0°C (Prev. Hold)</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <a href="/cooling" class="btn btn-outline-primary btn-sm py-2">
+                        <i data-lucide="sliders" class="me-1" style="width: 14px; height: 14px;"></i> Open Cooling Controls
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Historical Sensor Telemetry Chart -->
+<div class="card-industrial mb-4">
+    <div class="card-header-clean">
+        <span><i data-lucide="activity" class="me-2" style="width: 16px; height: 16px;"></i>Historical Sensor Telemetry Readings</span>
+        <span class="badge bg-secondary" id="telemetryHistoryBadge">Active Telemetry</span>
+    </div>
+    <div class="card-body-clean">
+        <div class="chart-container" style="height: 280px;">
+            <canvas id="overviewTelemetryChart"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/charts.js"></script>
+<script src="/static/js/dashboard.js"></script>
+{% endblock %}

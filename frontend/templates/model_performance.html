@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+
+{% block title %}Model Performance & Benchmark Evaluation - Data Center Thermal AI{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+        <h1 class="page-title">LSTM Model Performance & Benchmark Evaluation</h1>
+        <div class="page-subtitle">Rigorous empirical evaluation against held-out chronological test sets, comparing Stacked LSTM against Random Forest and Persistence baselines.</div>
+    </div>
+    <div>
+        <button class="btn btn-primary-custom btn-sm" onclick="triggerRetraining()"><i data-lucide="refresh-cw" class="me-1" style="width: 14px; height: 14px;"></i> Retrain Model</button>
+    </div>
+</div>
+
+<!-- Retraining Status Box (if active) -->
+<div id="retrainStatusBox" class="alert alert-info py-2 px-3 small d-none mb-3">
+    <div class="d-flex align-items-center gap-2">
+        <span class="spinner-border spinner-border-sm"></span>
+        <span id="retrainStatusText">Training in progress...</span>
+    </div>
+</div>
+
+<!-- Metric Cards -->
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="kpi-card text-center">
+            <div class="kpi-label">Mean Absolute Error (MAE)</div>
+            <div class="kpi-main-val text-primary" id="perfMae">-- °C</div>
+            <div class="kpi-footnote">Average absolute deviation on test horizon</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="kpi-card text-center">
+            <div class="kpi-label">Root Mean Squared Error (RMSE)</div>
+            <div class="kpi-main-val text-primary" id="perfRmse">-- °C</div>
+            <div class="kpi-footnote">Strict penalization of large outlier deviations</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="kpi-card text-center">
+            <div class="kpi-label">Coefficient of Determination (R²)</div>
+            <div class="kpi-main-val text-success" id="perfR2">--</div>
+            <div class="kpi-footnote">Variance explained across the 24-hour cycle</div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Row -->
+<div class="row g-3 mb-4">
+    <div class="col-lg-6">
+        <div class="card-industrial">
+            <div class="card-header-clean">
+                <span><i data-lucide="line-chart" class="me-2" style="width: 16px; height: 16px;"></i>Training vs Validation Loss Curve</span>
+                <span class="badge bg-light text-secondary border">MSE Loss</span>
+            </div>
+            <div class="card-body-clean">
+                <div style="height: 290px; position: relative;">
+                    <canvas id="trainingLossChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card-industrial">
+            <div class="card-header-clean">
+                <span><i data-lucide="activity" class="me-2" style="width: 16px; height: 16px;"></i>Actual vs Predicted Overlay (Test Sample)</span>
+                <span class="badge bg-light text-secondary border">Held-Out Test Partition</span>
+            </div>
+            <div class="card-body-clean">
+                <div style="height: 290px; position: relative;">
+                    <canvas id="actualVsPredictedChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Benchmark Comparison Table & Architecture Summary -->
+<div class="row g-3">
+    <div class="col-lg-7">
+        <div class="card-industrial">
+            <div class="card-header-clean">
+                <span><i data-lucide="layers" class="me-2" style="width: 16px; height: 16px;"></i>Model Architecture Comparison</span>
+                <span class="badge bg-primary">IEEE Empirical Results</span>
+            </div>
+            <div class="card-body-clean p-0">
+                <div class="table-responsive">
+                    <table class="table table-data-center table-bordered mb-0">
+                        <thead>
+                            <tr>
+                                <th>Model Architecture</th>
+                                <th>MAE (°C)</th>
+                                <th>RMSE (°C)</th>
+                                <th>R² Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="benchmarkTableBody">
+                            <tr><td colspan="4" class="text-center py-3 text-muted">Loading benchmark evaluation...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-5">
+        <div class="card-industrial mb-3">
+            <div class="card-header-clean">
+                <span><i data-lucide="flame" class="me-2 text-danger" style="width: 16px; height: 16px;"></i>High-Temperature Thermal Performance</span>
+                <span class="badge bg-danger">Critical Range (≥ 28°C)</span>
+            </div>
+            <div class="card-body-clean small text-secondary">
+                <div class="row g-2 mb-2">
+                    <div class="col-6">
+                        <div class="p-2 bg-light rounded border text-center">
+                            <div class="text-muted" style="font-size: 11px;">Actual Test Peak</div>
+                            <div class="fw-bold fs-6 text-danger" id="highActualPeak">-- °C</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-2 bg-light rounded border text-center">
+                            <div class="text-muted" style="font-size: 11px;">Predicted Test Peak</div>
+                            <div class="fw-bold fs-6 text-primary" id="highPredPeak">-- °C</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="p-2 bg-light rounded border text-center">
+                            <div class="text-muted" style="font-size: 11px;">High-Temp MAE (≥ 28°C)</div>
+                            <div class="fw-bold text-dark" id="highTempMae">-- °C</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-2 bg-light rounded border text-center">
+                            <div class="text-muted" style="font-size: 11px;">Normal-Temp MAE (< 28°C)</div>
+                            <div class="fw-bold text-success" id="normalTempMae">-- °C</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-industrial">
+            <div class="card-header-clean">
+                <span><i data-lucide="info" class="me-2" style="width: 16px; height: 16px;"></i>Neural Network Specifications</span>
+            </div>
+            <div class="card-body-clean small text-secondary">
+                <div class="p-2 bg-light rounded border mb-2">
+                    <div class="fw-bold text-dark">Architecture:</div>
+                    <div>Stacked LSTM (64 units) &rarr; Dropout(0.1) &rarr; LSTM (64 units) &rarr; Dropout(0.1) &rarr; Dense(64) &rarr; Dense(144 outputs for 10-min HazardNet / 288 for 5-min).</div>
+                </div>
+                <div class="p-2 bg-light rounded border mb-2">
+                    <div class="fw-bold text-dark">Optimizer & Loss:</div>
+                    <div>Adam Optimizer ($\alpha=0.001$), Thermal-Weighted Loss with Peak Multiplier, EarlyStopping ($patience=4$).</div>
+                </div>
+                <div class="p-2 bg-light rounded border">
+                    <div class="fw-bold text-dark">Data Leakage Prevention:</div>
+                    <div>Chronological 70% Train, 15% Val, 15% Test. MinMax scalers fitted solely on the training partition.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/charts.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadModelMetricsAndCharts();
+    });
+
+    async function loadModelMetricsAndCharts() {
+        try {
+            const res = await fetch('/api/model/metrics');
+            const json = await res.json();
+            if (!json.success) return;
+
+            const evalData = json.data.evaluation;
+            const history = json.data.training_history;
+
+            if (evalData && evalData.models) {
+                const lstm = evalData.models.LSTM;
+                if (lstm) {
+                    document.getElementById('perfMae').textContent = `${lstm.mae.toFixed(4)} °C`;
+                    document.getElementById('perfRmse').textContent = `${lstm.rmse.toFixed(4)} °C`;
+                    document.getElementById('perfR2').textContent = `${lstm.r2.toFixed(4)}`;
+                }
+
+                const tbody = document.getElementById('benchmarkTableBody');
+                tbody.innerHTML = Object.entries(evalData.models).map(([k, m]) => `
+                    <tr ${k === 'LSTM' ? 'class="table-primary fw-semibold"' : ''}>
+                        <td>${m.name}</td>
+                        <td>${m.mae.toFixed(4)}</td>
+                        <td>${m.rmse.toFixed(4)}</td>
+                        <td>${m.r2.toFixed(4)}</td>
+                    </tr>
+                `).join('');
+            }
+
+            if (evalData && evalData.high_temperature_evaluation) {
+                const ht = evalData.high_temperature_evaluation;
+                const actPeakEl = document.getElementById('highActualPeak');
+                const predPeakEl = document.getElementById('highPredPeak');
+                const htMaeEl = document.getElementById('highTempMae');
+                const normMaeEl = document.getElementById('normalTempMae');
+                if (actPeakEl) actPeakEl.textContent = `${ht.actual_peak_celsius.toFixed(2)} °C`;
+                if (predPeakEl) predPeakEl.textContent = `${ht.predicted_peak_celsius.toFixed(2)} °C`;
+                if (htMaeEl) htMaeEl.textContent = `${ht.high_temp_mae.toFixed(4)} °C`;
+                if (normMaeEl) normMaeEl.textContent = `${ht.normal_temp_mae.toFixed(4)} °C`;
+            }
+
+            if (history) {
+                renderTrainingLossChart(history);
+            }
+
+            if (evalData && evalData.sample_forecast) {
+                renderActualVsPredictedChart(evalData.sample_forecast);
+            }
+        } catch (err) {
+            console.error('Error loading metrics:', err);
+        }
+    }
+
+    async function triggerRetraining() {
+        if (!confirm('Start LSTM retraining on the active dataset? Training executes in background.')) return;
+        const box = document.getElementById('retrainStatusBox');
+        box.classList.remove('d-none');
+        document.getElementById('retrainStatusText').textContent = 'Training initiated in background...';
+
+        try {
+            const res = await fetch('/api/model/train', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({epochs: 10})
+            });
+            const json = await res.json();
+            if (json.success) {
+                pollRetrainStatus();
+            } else {
+                alert('Training failed: ' + json.error);
+                box.classList.add('d-none');
+            }
+        } catch (err) {
+            alert('Server error: ' + err.message);
+            box.classList.add('d-none');
+        }
+    }
+
+    function pollRetrainStatus() {
+        const interval = setInterval(async () => {
+            try {
+                const res = await fetch('/api/dataset/status');
+                const json = await res.json();
+                if (json.success && json.data) {
+                    const st = json.data;
+                    document.getElementById('retrainStatusText').textContent = `${st.stage_message} (${Math.round(st.progress * 100)}%)`;
+                    if (st.state === 'COMPLETED' || st.state === 'FAILED') {
+                        clearInterval(interval);
+                        document.getElementById('retrainStatusBox').classList.add('d-none');
+                        loadModelMetricsAndCharts();
+                        alert('Training pipeline complete!');
+                    }
+                }
+            } catch (e) {
+                clearInterval(interval);
+            }
+        }, 4000);
+    }
+</script>
+{% endblock %}

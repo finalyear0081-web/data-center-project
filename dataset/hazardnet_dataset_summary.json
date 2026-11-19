@@ -1,0 +1,38 @@
+{
+  "dataset_title": "HazardNet Marconi A2 Real-World Data Center Operational Telemetry",
+  "doi": "10.5281/zenodo.10050368",
+  "source_facility": "CINECA Marconi A2 Tier-0 Supercomputer",
+  "node_count": 3312,
+  "start_date": "2019-01-14 18:10:00",
+  "end_date": "2019-12-31 22:50:00",
+  "sampling_interval_minutes": 10,
+  "daily_forecast_horizon_steps": 144,
+  "total_operational_records": 50573,
+  "available_model_features": [
+    "inlet_temperature",
+    "outlet_temperature",
+    "it_power_consumption"
+  ],
+  "unavailable_features_documented": [
+    "humidity",
+    "cpu_usage",
+    "hot_aisle_temperature",
+    "cold_aisle_temperature",
+    "outdoor_temperature",
+    "cooling_power_consumption"
+  ],
+  "temperature_statistics_celsius": {
+    "min": 25.45,
+    "max": 38.46,
+    "mean": 33.48,
+    "std": 1.52,
+    "counts_above_26": 50549,
+    "counts_above_28": 49959,
+    "counts_above_30": 49410,
+    "counts_above_33": 32135
+  },
+  "cooling_simulation_compatibility": {
+    "simulated_controller": "Hysteresis threshold (28.0\u00b0C ON / 26.0\u00b0C OFF)",
+    "manual_override_supported": true
+  }
+}

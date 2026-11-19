@@ -1,0 +1,43 @@
+{
+  "loss": [
+    0.04644690826535225,
+    0.0367446094751358,
+    0.031928252428770065,
+    0.029346410185098648,
+    0.024996813386678696,
+    0.020900318399071693,
+    0.021794982254505157,
+    0.019839687272906303,
+    0.018244408071041107
+  ],
+  "val_loss": [
+    0.04894540086388588,
+    0.03906096890568733,
+    0.03704771772027016,
+    0.03112618811428547,
+    0.024230003356933594,
+    0.026699822396039963,
+    0.029041076079010963,
+    0.025139033794403076,
+    0.026186130940914154
+  ],
+  "epochs": 9,
+  "architecture": "RESIDUAL_LSTM",
+  "schema_type": "HAZARDNET_OPERATIONAL",
+  "horizon_steps": 720,
+  "forecast_horizon_hours": 24.0,
+  "input_window": 360,
+  "dataset_source": "20261117_023739_synthetic_data_center_thermal_test_30days.csv",
+  "feature_configuration": [
+    "inlet_temperature",
+    "outlet_temperature",
+    "hot_aisle_temperature",
+    "cold_aisle_temperature",
+    "it_power_consumption",
+    "cooling_power_consumption",
+    "humidity",
+    "cpu_usage"
+  ],
+  "target_column": "inlet_temperature",
+  "trained_at": "2026-11-18T13:41:18.545199+00:00"
+}

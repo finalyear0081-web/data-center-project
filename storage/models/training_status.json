@@ -1,0 +1,6 @@
+{
+  "status": "RUNNING",
+  "progress": 0.6,
+  "message": "Training RESIDUAL_LSTM for up to 10 epochs on 1664 sequences...",
+  "timestamp": "2026-11-19T02:26:54.307568+00:00"
+}

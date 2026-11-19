@@ -1,0 +1,196 @@
+/* Base Industrial Clean Theme */
+:root {
+    --bg-app: #f8fafc;
+    --card-bg: #ffffff;
+    --border-subtle: #e2e8f0;
+    --border-hover: #cbd5e1;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --text-dim: #94a3b8;
+    
+    --brand-blue: #2563eb;
+    --brand-blue-hover: #1d4ed8;
+    --brand-blue-subtle: #eff6ff;
+    
+    --status-green: #10b981;
+    --status-green-bg: #ecfdf5;
+    --status-orange: #f59e0b;
+    --status-orange-bg: #fffbeb;
+    --status-red: #ef4444;
+    --status-red-bg: #fef2f2;
+    --status-gray: #6b7280;
+    --status-gray-bg: #f3f4f6;
+    
+    --sidebar-width: 250px;
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    font-family: var(--font-stack);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Sidebar Navigation */
+.app-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: #ffffff;
+    border-right: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1020;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.sidebar-brand {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.sidebar-nav {
+    padding: 1rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex-grow: 1;
+}
+
+.nav-item-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.85rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.15s ease-in-out;
+}
+
+.nav-item-link:hover {
+    color: var(--text-main);
+    background-color: #f1f5f9;
+}
+
+.nav-item-link.active {
+    color: var(--brand-blue);
+    background-color: var(--brand-blue-subtle);
+    font-weight: 600;
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Top Navbar */
+.topbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 0.75rem 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1010;
+}
+
+.page-body {
+    padding: 1.75rem;
+    flex-grow: 1;
+}
+
+/* Cards */
+.card-industrial {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1.25rem;
+}
+
+.card-header-clean {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-subtle);
+    background-color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body-clean {
+    padding: 1.25rem;
+}
+
+/* Typography & Titles */
+.page-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+}
+
+.page-subtitle {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: var(--brand-blue);
+    border-color: var(--brand-blue);
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--brand-blue-hover);
+    color: #ffffff;
+}
+
+.btn-secondary-custom {
+    background-color: #ffffff;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-main);
+    font-weight: 500;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+}
+
+.btn-secondary-custom:hover {
+    background-color: #f8fafc;
+    border-color: var(--border-hover);
+}

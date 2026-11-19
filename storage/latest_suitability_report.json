@@ -1,0 +1,225 @@
+{
+  "verdict": "PARTIALLY_SUITABLE",
+  "verdict_label": "Partially Suitable (1.0h Horizon Supported)",
+  "badge_color": "warning",
+  "summary_message": "Dataset is viable for thermal modeling, but requires a calibrated 1.0-hour horizon or handles partitioned experiment boundaries.",
+  "is_24h_feasible": false,
+  "recommended_horizon_hours": 1.0,
+  "recommended_horizon_steps": 30,
+  "recommended_input_steps": 60,
+  "schema_checks": {
+    "target_detected": true,
+    "target_source_column": "inlet_temperature",
+    "target_confidence": 1.0,
+    "available_features_count": 8,
+    "available_features": [
+      "inlet_temperature",
+      "outlet_temperature",
+      "hot_aisle_temperature",
+      "cold_aisle_temperature",
+      "humidity",
+      "cpu_usage",
+      "it_power_consumption",
+      "cooling_power_consumption"
+    ],
+    "unavailable_features": [
+      "facility_power_consumption",
+      "cooling_supply_temperature",
+      "cooling_return_temperature"
+    ],
+    "detected_schema_name": "Distributed Cluster Telemetry Schema"
+  },
+  "data_quality": {
+    "total_records": 400,
+    "duplicate_records_count": 0,
+    "infinite_values_count": 0,
+    "constant_columns": [],
+    "missing_percentages": {
+      "timestamp": 0.0,
+      "inlet_temperature": 0.0,
+      "outlet_temperature": 0.0,
+      "hot_aisle_temperature": 0.0,
+      "cold_aisle_temperature": 0.0,
+      "humidity": 0.0,
+      "cpu_usage": 0.0,
+      "it_power_consumption": 0.0,
+      "cooling_power_consumption": 0.0
+    }
+  },
+  "time_series_analysis": {
+    "time_source_column": "timestamp",
+    "is_calendar_timestamp": true,
+    "inferred_interval_minutes": 2,
+    "is_regular_sampling": true,
+    "out_of_order_count": 0,
+    "total_duration_hours": 13.3,
+    "experiments_count": 1,
+    "experiments_list": [
+      "single_stream"
+    ]
+  },
+  "temperature_analysis": {
+    "min_celsius": 22.0,
+    "max_celsius": 26.0,
+    "mean_celsius": 24.37,
+    "std_celsius": 1.33,
+    "quantiles": {
+      "25%": 23.21,
+      "50%": 24.62,
+      "75%": 25.62
+    },
+    "counts_above_26": 0,
+    "counts_above_28": 0,
+    "counts_above_30": 0,
+    "counts_above_33": 0,
+    "thermal_volatility": "MODERATE",
+    "out_of_bounds_count": 0
+  },
+  "reasons": [],
+  "warnings": [],
+  "recommendations": [
+    "24-hour horizon infeasible (400 records per partition < 1440 required). Calibrated validated 1-hour horizon (30 steps) with 60-step history."
+  ],
+  "mapping_details": {
+    "timestamp": {
+      "canonical_key": "timestamp",
+      "display_name": "Time Index / Timestamp",
+      "source_column": "timestamp",
+      "unit": "ISO / Elapsed Min",
+      "confidence": 1.0,
+      "is_manual": false,
+      "available": true,
+      "missing_percentage": 0.0
+    },
+    "inlet_temperature": {
+      "canonical_key": "inlet_temperature",
+      "display_name": "Server Inlet Temperature (Target)",
+      "source_column": "inlet_temperature",
+      "unit": "\u00b0C",
+      "confidence": 1.0,
+      "is_manual": false,
+      "available": true,
+      "missing_percentage": 0.0
+    },
+    "outlet_temperature": {
+      "canonical_key": "outlet_temperature",
+      "display_name": "Server Outlet Temperature",
+      "source_column": "outlet_temperature",
+      "unit": "\u00b0C",
+      "confidence": 1.0,
+      "is_manual": false,
+      "available": true,
+      "missing_percentage": 0.0
+    },
+    "hot_aisle_temperature": {
+      "canonical_key": "hot_aisle_temperature",
+      "display_name": "Hot Aisle Air Temperature",
+      "source_column": "hot_aisle_temperature",
+      "unit": "\u00b0C",
+      "confidence": 1.0,
+      "is_manual": false,
+      "available": true,
+      "missing_percentage": 0.0
+    },
+    "cold_aisle_temperature": {
+      "canonical_key": "cold_aisle_temperature",
+      "display_name": "Cold Aisle Air Temperature",
+      "source_column": "cold_aisle_temperature",
+      "unit": "\u00b0C",
+      "confidence": 1.0,
+      "is_manual": false,
+      "available": true,
+      "missing_percentage": 0.0
+    },
+    "humidity": {
+      "canonical_key": "humidity",
+      "display_name": "Relative Humidity",
+      "source_column": "humidity",
+      "unit": "%",
+      "confidence": 1.0,
+      "is_manual": false,
+      "available": true,
+      "missing_percentage": 0.0
+    },
+    "cpu_usage": {
+      "canonical_key": "cpu_usage",
+      "display_name": "Server CPU Utilization",
+      "source_column": "cpu_usage",
+      "unit": "%",
+      "confidence": 1.0,
+      "is_manual": false,
+      "available": true,
+      "missing_percentage": 0.0
+    },
+    "it_power_consumption": {
+      "canonical_key": "it_power_consumption",
+      "display_name": "IT Compute Power Consumption",
+      "source_column": "it_power_consumption",
+      "unit": "kW / W",
+      "confidence": 1.0,
+      "is_manual": false,
+      "available": true,
+      "missing_percentage": 0.0
+    },
+    "facility_power_consumption": {
+      "canonical_key": "facility_power_consumption",
+      "display_name": "Total Facility Power Consumption",
+      "source_column": null,
+      "unit": "kW / W",
+      "confidence": 0.0,
+      "is_manual": false,
+      "available": false,
+      "missing_percentage": 100.0
+    },
+    "cooling_supply_temperature": {
+      "canonical_key": "cooling_supply_temperature",
+      "display_name": "Cooling Supply Temperature",
+      "source_column": null,
+      "unit": "\u00b0C",
+      "confidence": 0.0,
+      "is_manual": false,
+      "available": false,
+      "missing_percentage": 100.0
+    },
+    "cooling_return_temperature": {
+      "canonical_key": "cooling_return_temperature",
+      "display_name": "Cooling Return Temperature",
+      "source_column": null,
+      "unit": "\u00b0C",
+      "confidence": 0.0,
+      "is_manual": false,
+      "available": false,
+      "missing_percentage": 100.0
+    },
+    "cooling_power_consumption": {
+      "canonical_key": "cooling_power_consumption",
+      "display_name": "Cooling Power Consumption",
+      "source_column": "cooling_power_consumption",
+      "unit": "kW",
+      "confidence": 1.0,
+      "is_manual": false,
+      "available": true,
+      "missing_percentage": 0.0
+    },
+    "experiment_id": {
+      "canonical_key": "experiment_id",
+      "display_name": "Experiment / Batch Run Identifier",
+      "source_column": null,
+      "unit": "ID",
+      "confidence": 0.0,
+      "is_manual": false,
+      "available": false,
+      "missing_percentage": 100.0
+    },
+    "device_id": {
+      "canonical_key": "device_id",
+      "display_name": "Node / Device Identifier",
+      "source_column": null,
+      "unit": "ID",
+      "confidence": 0.0,
+      "is_manual": false,
+      "available": false,
+      "missing_percentage": 100.0
+    }
+  }
+}
